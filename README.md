@@ -1,4 +1,4 @@
-# _Freebie
+
 # Freebie
 
 <img src="https://github.com/Resilient-Labs/freebie/blob/Main/public/img/logo.png" width="350">
