@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" type="image/png" href="/img/logo.png">
+      <title>Freebie New Post</title>
+      <link rel="stylesheet" type="text/css" href="vendor/slick/slick.min.css"/>
+      <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.min.css"/>
+      <!-- Icofont Icon-->
+      <link href="vendor/icons/icofont.min.css" rel="stylesheet" type="text/css">
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/style.css" rel="stylesheet">
+      <!-- Sidebar CSS -->
+      <link href="vendor/sidebar/demo.css" rel="stylesheet">
+      <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+   </head>
+
+   <body class="fixed-bottom-padding">
+  
+
+      <!-- Nav bar -->
+      
+      <% include partials/nav.ejs %>
+
+      <!-- body -->
+      <section class="py-4 osahan-main-body">
+         <div class="container" style="height: 868px;">
+            <div class="row">
+               <!-- <div class="col-lg-4">
+                  <div class="osahan-account bg-white rounded shadow-sm overflow-hidden">
+                     <div class="p-4 profile text-center border-bottom">
+                        <img src="/img/user.png" class="img-fluid rounded-pill">
+                        <h6 class="font-weight-bold m-0 mt-2">Askbootstrap</h6>
+                        <p class="small text-muted m-0">iamosahan@gmail.com</p>
+                     </div>
+                     <div class="account-sections">
+                        <ul class="list-group">
+                           <a href="/my_account" class="text-decoration-none text-dark">
+                              <li class="border-bottom bg-white d-flex align-items-center p-3">
+                                 <i class="icofont-user osahan-icofont bg-danger"></i>My Account
+                                 <span class="badge badge-success p-1 badge-pill ml-auto"><i class="icofont-simple-right"></i></span>
+                              </li>
+                           </a>
+                           <a href="/promos" class="text-decoration-none text-dark">
+                              <li class="border-bottom bg-white d-flex align-items-center p-3">
+                                 <i class="icofont-sale-discount osahan-icofont bg-success"></i>Promos
+                                 <span class="badge badge-success p-1 badge-pill ml-auto"><i class="icofont-simple-right"></i></span>
+                              </li>
+                           </a>
+                           <a href="/my_address" class="text-decoration-none text-dark">
+                              <li class="border-bottom bg-white d-flex align-items-center p-3">
+                                 <i class="icofont-address-book osahan-icofont bg-dark"></i>My Address
+                                 <span class="badge badge-success p-1 badge-pill ml-auto"><i class="icofont-simple-right"></i></span>
+                              </li>
+                           </a>
+                           <a href="/terms_conditions" class="text-decoration-none text-dark">
+                              <li class="border-bottom bg-white d-flex align-items-center p-3">
+                                 <i class="icofont-info-circle osahan-icofont bg-primary"></i>Terms, Privacy & Policy
+                                 <span class="badge badge-success p-1 badge-pill ml-auto"><i class="icofont-simple-right"></i></span>
+                              </li>
+                           </a>
+                           <a href="/help_support" class="text-decoration-none text-dark">
+                              <li class="border-bottom bg-white d-flex align-items-center p-3">
+                                 <i class="icofont-phone osahan-icofont bg-warning"></i>Help & Support
+                                 <span class="badge badge-success p-1 badge-pill ml-auto"><i class="icofont-simple-right"></i></span>
+                              </li>
+                           </a>
+                           <a href="/help_ticket" class="text-decoration-none text-dark">
+                              <li class="border-bottom bg-white d-flex align-items-center p-3">
+                                 <i class="icofont-phone osahan-icofont bg-success"></i>Ticket
+                                 <span class="badge badge-success p-1 badge-pill ml-auto"><i class="icofont-simple-right"></i></span>
+                              </li>
+                           </a>
+                           <a href="/signin" class="text-decoration-none text-dark">
+                              <li class="border-bottom bg-white d-flex  align-items-center p-3">
+                                 <i class="icofont-lock osahan-icofont bg-danger"></i> Logout
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </div>
+               </div> -->
+               <div class="col-lg-8 p-4 bg-white rounded shadow-sm">
+                  <h4 class="mb-4 profile-title">Add Listing</h4>
+                  <div id="edit_profile">
+                     <div class="p-0">
+
+                        <form action="/newPost" method='POST' class="newPostForm" enctype="multipart/form-data">
+                           <div class="form-group col-lg-12 newPost" >
+                              <label for="exampleInputName1" class="newPostLabel">Title</label>
+                              <input name="name" type="text" class="form-control newPost" id="" placeholder="For example: Brand, model, color, and size.">
+
+                           </div>
+                           <div class="form-group col-lg-6 newPost">
+                              <label for="exampleInputEmail1" class="newPostLabel">Delivery</label>
+                              <select name="pickUpDropOff" id="" class="form-control newPost">
+                                 <option value="Pickup">Pickup</option>
+                                 <option value="Drop off">Drop off</option>
+                              </select>
+                           </div>
+                           <div class="form-group col-lg-6 newPost">
+                              <label for="exampleInputEmail1" class="newPostLabel">Expiration</label>
+                              <select name="duration" id="" class="form-control newPost">
+                                 <option value="12 Hours">12 Hours</option>
+                                 <option value="24 Hours">24 Hours</option>
+                              </select>
+                           </div>
+                           <div class="form-group col-lg-6">
+                              <label for="" class="newPostLabel">Categories</label>
+                              <select name="category" id="" class="form-control newPost">
+                                 <option value="furniture">Furniture</option>
+                                 <option value="accessories">Accessories</option>
+                                 <option value="winterGear">Winter Gear</option>
+                                 <option value="shoes">Shoes</option>
+                                 <option value="kitchenware">Kitchenware</option>
+                                 <option value="makeup">Makeup</option>
+                                 <option value="games">Games</option>
+                                 <option value="skincare">Skincare</option>
+                                 <option value="haircare">Haircare</option>
+                                 <option value="pet">Pet</option>
+                              </select>
+                              <!-- <input type="date" class="form-control" id="exampleInputEmail1"> -->
+                           </div>
+                           <div class="form-group col-lg-6">
+                              <label for="" class="newPostLabel">Winner Selection</label>
+                              <select name="RandomChoice" id="" class="form-control newPost">
+                                 <option value="Random Winner">Random Winner</option>
+                                 <option value="User Choice">User Choice</option>
+                              </select>
+                           </div>
+                           <div class="form-group col-lg-12">
+                              <label for="exampleInputNumber1" class="newPostLabel">Description</label>
+                              <textarea name="description" type="text" class="form-control newPost" id="" placeholder="Describe your item." style="height: 142px;"></textarea>
+                           </div>
+                           <div class="form-group col-lg-12 newPost">
+                              <div class="file-upload">
+                                 <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+                               
+                                 <div class="image-upload-wrap">
+                                   <input class="file-upload-input" type='file' name="itemImage" onchange="readURL(this);" accept="image/*" />
+                                   <div class="drag-text">
+                                     <h3>Drag and drop a file or select add Image</h3>
+                                   </div>
+                                 </div>
+                                 <div class="file-upload-content">
+                                   <img class="file-upload-image" src="#" alt="your image" />
+                                   <div class="image-title-wrap">
+                                     <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                                   </div>
+                                 </div>
+                               </div>
+                           </div>
+
+                           <div class="text-center" style="margin: auto;
+                           width: 200px;">
+                              <button type="submit" class="btn btn-success btn-block btn-lg" style="box-shadow: 0 0 4px #333;">Submit</button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+     <!-- footer -->
+      <% include partials/footer.ejs %>
+
+      <script src="/vendor/jquery/jquery.min.js"></script>
+      <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- slick Slider JS-->
+      <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+      <!-- Sidebar JS-->
+      <script type="text/javascript" src="/vendor/sidebar/hc-offcanvas-nav.js"></script>
+      <script type="text/javascript" src="/js/newPost.js"></script>
+      <!-- Custom scripts for all pages-->
+      <script src="/js/osahan.js"></script>
+   </body>
+</html>
